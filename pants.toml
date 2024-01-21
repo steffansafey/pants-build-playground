@@ -1,0 +1,20 @@
+[GLOBAL]
+pants_version = "2.18.0"
+
+backend_packages = [
+    "pants.backend.python"
+]
+
+[source]
+root_patterns = ["/"]
+
+[python]
+interpreter_constraints = ["==3.9.*"]
+enable_resolves = true
+resolves = {python-default = "python-default.lock"}
+
+[python-bootstrap]
+search_path = ["<PYENV>"]
+
+[python-infer]
+use_rust_parser = true
