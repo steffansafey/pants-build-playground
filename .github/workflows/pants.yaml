@@ -37,7 +37,6 @@ jobs:
         pants test ::
     - name: Package
       run: |
-        # We also smoke test that our release process will work by running `package`.
         pants package ::
     - name: Upload packages
       uses: actions/upload-artifact@v3
