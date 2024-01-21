@@ -1,7 +1,7 @@
-from .webserver import run_server
+from . import webserver
 def main():
     print("Starting up!")
-    run_server()
+    webserver.run_server()
 
 if __name__ == "__main__":
     main()
