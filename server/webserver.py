@@ -7,7 +7,7 @@ app = FastAPI()
 @app.get("/")
 async def read_root():
     """A simple endpoint to test out the webserver."""
-    return {"message": "Hello World"}
+    return {"message": "Hello there, World"}
 
 
 def run_server():
