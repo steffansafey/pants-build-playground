@@ -1,13 +1,17 @@
 import uvicorn
 from fastapi import FastAPI
 
+from helper_library.math import add
+
 app = FastAPI()
 
 
 @app.get("/")
 async def read_root():
     """A simple endpoint to test out the webserver."""
-    return {"message": "Hello there, World"}
+
+    number = add(1, 2)
+    return {"message": "Hello there, World, 1 + 2 = " + str(number) + "!"}
 
 
 def run_server():
